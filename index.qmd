@@ -1,0 +1,29 @@
+---
+title: "web"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+1 + 1
+```
+```{r}
+
+library(ggplot2)
+
+
+data(mtcars)
+
+
+ggplot(mtcars, aes(x = rownames(mtcars), y = mpg)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Miles Per Gallon (mpg) for mtcars",
+       x = "Car Model",
+       y = "Miles Per Gallon (mpg)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
+
+```
+
